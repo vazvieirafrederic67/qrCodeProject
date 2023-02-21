@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load cms_tags sekizai_tags static %}
+
+
+{% block content %}
+
+    {% placeholder "feature" %}
+
+    {% placeholder "content" %}
+
+<!--    <ul>-->
+<!--        {% for child in request.current_page.get_child_pages %}-->
+<!--            <li>-->
+<!--                <h1>Start test</h1>-->
+<!--                {{ child.get_menu_title }}-->
+<!--                {{ child.get_menu_content }}-->
+<!--                <h1>End test</h1>-->
+<!--            </li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+
+    {% placeholder "splashbox" %}
+
+{% endblock content %}

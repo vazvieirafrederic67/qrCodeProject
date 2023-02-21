@@ -1,0 +1,39 @@
+{% load cms_tags sekizai_tags static menu_tags  %}
+
+<html>
+    <head>
+        <title>{% page_attribute "page_title" %}</title>
+        
+        {% render_block "css" %}
+
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <style>
+            a {
+                text-decoration: none;
+            }
+
+            .selected > a {
+                font-size: 24px;
+            }
+
+            ul > li > ul  {
+                margin-left: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="height: 25px;">
+            {% cms_toolbar %}
+        </div>
+
+        <div style="min-height: 25px;">
+            <ul>
+                {% show_menu 0 100 100 100 %}
+            </ul>
+        </div>
+
+        {% block content %}{% endblock content %}
+
+        {% render_block "js" %}
+    </body>
+</html>
